@@ -1,8 +1,3 @@
-<?php 
-	session_start(); 
-	if ($_SESSION["auth"]!=TRUE)
-		header("Location:login_error.php");
-?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -37,7 +32,7 @@
   <div id="container">
             <!-- zone de connexion -->
             
-<!--            <form action="verification.php" method="POST">
+         <form action="verification.php" method="POST">
                 <h1>Connexion</h1>
                 
                 <label><b>Nom d'utilisateur</b></label>
@@ -54,7 +49,7 @@
                         echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
                 }
                 ?>
-            </form> -->
+            </form>
         </div>
 
 
