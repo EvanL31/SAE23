@@ -1,0 +1,98 @@
+/* CSS style2 adaptatif */
+a
+{
+	color:cyan;
+	font-size: 140%;
+}
+
+em
+{
+	font-size: 125%;
+}
+
+body
+{
+	background-color:gray;
+	font-family:'Arial Narrow Bold';
+}
+
+h2
+{
+	font-size: 250%;
+	text-align: center;
+	color:orange;
+}
+
+h3
+{
+	color:tomato;
+	font-size: 235%;
+}
+
+p
+{
+	font-size: 150%;
+	text-align: left;
+}
+
+.navbar a 
+{
+	font-weight:bold;
+	font-size:170%;
+	font-family:'Arial Narrow Bold';
+	color:orange;
+	background-color:dimgray;
+}
+
+h1
+{
+	font-size:235%;
+	color:orange;
+}
+
+header
+{
+	background-color:#303030;
+}
+
+footer
+{
+	background-color:gray;
+	color:orange;
+	font-weight: bold;
+	bottom:0;
+	width:100%;
+	padding-top:20px;
+	height:50px;
+	font-size: 12px;
+}
+
+section
+{
+	border: 1px solid Black;
+	border-color:darkorange;
+	border-width: 3px;
+	border-spacing:30px;
+	background-color:darkslategrey;
+	color: orange;
+	border-radius: 30px;
+	margin:3%;
+}
+
+strong
+{
+	color:red;
+	font-size: 35px;
+}
+
+
+img
+{
+	width: 100%;
+}
+
+.first
+{
+	margin-top: 6%;
+}
+
