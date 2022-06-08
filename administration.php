@@ -26,8 +26,7 @@
 	<nav class="navbar" >
     <ul>
 		   <li><a href="./index.html" class="first">Accueil</a></li>
-		   <li><a href="./administration.php">Administration</a></li>
-		   <li><a href="./gestion.php">Gestion</a></li>
+		   <li><a href="./login_gest.php">Gestion</a></li>
 		   <li><a href="./consultation.php">Consultation</a></li>
     </ul>
    </nav>

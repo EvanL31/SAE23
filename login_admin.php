@@ -25,7 +25,10 @@
 			</p>
 			<form action="log_admin.php" method="post" enctype="multipart/form-data">
 				<fieldset>
-					<legend>Saissez le mot de passe...</legend>
+					<legend>Saisissez le login !!</legend>
+					<label for="log">Login : </label>
+					<input type="text" name="log" id="log" />
+					<legend>Saisissez le mot de passe !!</legend>
 					<label for="mdp">Mot de passe : </label>
 					<input type="password" name="mdp" id="mdp" />
 				</fieldset>
