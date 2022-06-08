@@ -1,10 +1,16 @@
+<?php 
+	session_start(); 
+	if ($_SESSION["auth"]!=TRUE)
+		header("Location:login_error.php");
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
  <head>
  <link rel="stylesheet" type="text/css" href="./styles/styleRWD.css" />
  <link rel="stylesheet" type="text/css" href="./styles/style.css" />
   <link rel="icon" href="./images/initiales.jpg" />
-  <title> Administrateur </title>
+  <title> Consultation </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Pour bien gérer le RWD -->
   <meta name="author" content="JG" />
@@ -20,13 +26,12 @@
 	<nav class="navbar" >
     <ul>
 		   <li><a href="index.html" class="first">Accueil</a></li>
-		   <li><a href="administration.html">Administration</a></li>
-		   <li><a href="gestion.html">Gestion</a></li>
-		   <li><a href="consultation.html">Consultation</a></li>
+		   <li><a href="administration.php">Administration</a></li>
+		   <li><a href="gestion.php">Gestion</a></li>
+		   <li><a href="consultation.php">Consultation</a></li>
     </ul>
    </nav>
    </header><!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style2.css -->
-
 
 
 
@@ -60,8 +65,8 @@
   
   <footer>
     <ul>
-		<li>Garandet Julien<br> jg.garandet@gmail.com</li>
-		<li>SAÉ 14 <br> tél: 0782269034</li>
+		<li>Groupe GFLI</li>
+		<li>SAÉ 23</li>
 		<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
 	</ul>  
   </footer>
