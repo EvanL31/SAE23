@@ -25,10 +25,10 @@
     <!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style1.css -->
 	<nav class="navbar" >
     <ul>
-		   <li><a href="index.html" class="first">Accueil</a></li>
-		   <li><a href="administration.php">Administration</a></li>
-		   <li><a href="gestion.php">Gestion</a></li>
-		   <li><a href="consultation.php">Consultation</a></li>
+		   <li><a href="./index.html" class="first">Accueil</a></li>
+		   <li><a href="./administration.php">Administration</a></li>
+		   <li><a href="./gestion.php">Gestion</a></li>
+		   <li><a href="./consultation.php">Consultation</a></li>
     </ul>
    </nav>
    </header><!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style2.css -->
