@@ -30,18 +30,6 @@
 		if ($login==$line_RT[0])
 		 {
 		$ligne_RT = mysqli_fetch_row($resultat_RT);
-
-$request_RT = "SELECT `login` FROM `GESTIONNAIRE` WHERE login = 'rt'";
-		$result_RT = mysqli_query($id_bd, $request)
-			or die ("Execution de la requete impossible : $request");
-		$requete_RT = "SELECT `password` FROM `GESTIONNAIRE` WHERE password = 'etud'";
-		$resultat_RT = mysqli_query($id_bd, $requete)
-			or die("Execution de la requete impossible : $requete");
-
-		$line_RT = mysqli_fetch_row($result_RT);
-		if ($login==$line_RT[0])
-		 {
-		$ligne_RT = mysqli_fetch_row($resultat_RT);
 		if ($motdep==$ligne_RT[0])
 		 {
 			$_SESSION["auth"]=TRUE;		

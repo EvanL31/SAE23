@@ -15,7 +15,7 @@
 	<body>
 		<!-- Affichage entete -->
 		<?php 
-			include("entete.html"); 
+			include("entete_admin.html"); 
 		?>
 		<section>
 			<p>
