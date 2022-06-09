@@ -4,7 +4,7 @@
  <link rel="stylesheet" type="text/css" href="./styles/styleRWD.css" />
  <link rel="stylesheet" type="text/css" href="./styles/style.css" />
   <link rel="icon" href="./images/initiales.jpg" />
-  <title> Gestionnaire </title>
+  <title> Gestionnaire INFO </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Pour bien gérer le RWD -->
   <meta name="author" content="JG" />
@@ -15,7 +15,7 @@
  <body>
  
   <header>
-   <h1>  Consultation des mesures </h1>
+   <h1>  Consultation des mesures du bâtiment INFO </h1>
     <!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style1.css -->
 	<nav class="navbar" >
     <ul>
@@ -88,3 +88,4 @@
   </body>
     
 </html>
+

@@ -1,0 +1,25 @@
+Liste des fichiers du site web et signification:
+
+index.html : Page d'accueil du Site Web
+
+consultation.php : Page de consultationde la dernière mesure de chaque capteur
+
+login_admin.php : Page de rentrée du login/mot de passe de l'administrateur
+
+log_admin.php : Page de vérification du login/mot de passe de l'administrateur
+
+administration.php : Page d'ajout/suppression de capteurs/bâtiments et de visualisation des X dernières mesures
+
+login_gest : Page de rentrée du login/mot de passe d'un gestionnaire
+
+log_gest : Page de vérification du login/mot de passe du gestionnaire
+
+gestion_RT.php : Page de consultation des données du bâtiment RT
+
+gestion_INFO : Page de consultation des données du bâtiment INFO
+
+login_error.php : Page de redirection en cas de mauvaise rentrée d'un login/mot de passe
+
+entete_admin.html : Entête servant dans la page "login_admin.php"
+
+entete_gest.html : Entête servant dans la page "login_gest.php"
