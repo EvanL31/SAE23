@@ -21,41 +21,41 @@
     <ul>
 		   <li><a href="./index.html" class="first">Accueil</a></li>
 		   <li><a href="./login_admin.php">Administration</a></li>
+		   <li><a href="./login_gest.php">Gestion</a></li>
 		   <li><a href="./consultation.php">Consultation</a></li>
+		   <li><a href="./mentions_legales.html">Mentions légales</a></li>
     </ul>
    </nav>
    </header><!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style2.css -->
   
 
-  <div id="container">
-            <!-- zone de connexion -->
-            
-         <form action="verification.php" method="POST">
-                <h1>Connexion</h1>
-                
-                <label><b>Nom d'utilisateur</b></label>
-                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+<h1> Présentation de la page </h1>
 
-                <label><b>Mot de passe</b></label>
-                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+<p> Tout d'abord, cette page sert à présenter les mesures des capteurs du bâtiment RT. </p>
+<p> Dans le tableau ci-dessous, vous pouvez voir les salles avec leurs capteurs et dans quel bâtiment il se situe. 
 
-                <input type="submit" id='submit' value='LOGIN' >
-                <?php
-                if(isset($_GET['erreur'])){
-                    $err = $_GET['erreur'];
-                    if($err==1 || $err==2)
-                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                }
-                ?>
-            </form>
-        </div>
+<h2> Affichage des mesures des capteurs du bâtiment RT </h2>
 
+<?php
+include ("SAE23.php");
 
-
-
-
-
-
+				/* Sélection des pieces en fonction de l'interet */
+				$requete = "SELECT * FROM `MESURE` ORDER BY MES_DATE DESC LIMIT 15"
+				$resultat = mysqli_query($id_bd, $requete)
+					or die("Execution de la requete impossible : $requete");
+				mysqli_close($id_bd);
+				echo '<table>';
+				/* Affichage de la liste des pièces  */
+				while($ligne=mysqli_fetch_assoc($resultat))
+				 {	
+					extract($ligne);
+					echo '<tr>';
+					echo 	"<td> $CAPT_NOM </td>";
+					echo 	"<td> $MES_DATE </td>";
+					echo 	"<td> $MES_VAL </td>";
+					echo '</tr>';
+				 }
+			?>
 
 
 <aside id="last">
@@ -80,9 +80,9 @@
   
   <footer>
     <ul>
-		<li>Groupe GFLI</li>
+		<li>Groupe GLFA</li>
 		<li>SAÉ 23</li>
-		<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
+		<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tel: +33 (0)562747575</li>
 	</ul>  
   </footer>
   </body>
