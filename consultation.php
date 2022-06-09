@@ -9,6 +9,7 @@
   <meta name="author" content="JG" />
   <meta name="description" content="SAÉ 23" />
   <meta name="keywords" content="HTML, CSS" />
+  <meta HTTP-EQUIV="Refresh" CONTENT="10; URL=http://192.168.101.162/SAE23/consultation.php"> 
  </head>
 
  <body>
@@ -22,7 +23,7 @@
 		   <li><a href="./login_admin.php">Administration</a></li>
 		   <li><a href="./login_gest.php">Gestion</a></li>
 		   <li><a href="./consultation.php">Consultation</a></li>
-		   <li><a href="./mentions.html" class="first">Mentions legales</a></li>
+		   <li><a href="./mentions_legales.html" class="first">Mentions legales</a></li>
     </ul>
    </nav>
    </header>
@@ -104,9 +105,9 @@ echo "
     <td COLSPAN=\"2\">Salle E104</td>
   </tr>
   <tr> 
-    <td>Temp</td>
+    <td>Temp&eacute;rature</td>
     <td>CO2</td>
-    <td>Temp</td>
+    <td>Temp&eacute;rature</td>
     <td>CO2</td>
   </tr>
   <tr> 
@@ -126,9 +127,9 @@ echo "
     <td COLSPAN=\"2\">Salle B204</td>
   </tr>
   <tr> 
-    <td>Temp</td>
+    <td>Temp&eacute;rature</td>
     <td>CO2</td>
-    <td>Temp</td>
+    <td>Temp&eacute;rature</td>
     <td>CO2</td>
   </tr>
   <tr> 
@@ -144,8 +145,8 @@ echo "
   
   <footer>
     <ul>
-		<li>Groupe GFLI</li>
-		<li>SAÉ 23</li>
+		<li>Groupe GFLA</li>
+		<li>SAE 23</li>
 		<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
 	</ul>  
   </footer>

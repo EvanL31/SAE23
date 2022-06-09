@@ -96,10 +96,14 @@ footer
 td
 	{
 	border: 2px solid black;
+	padding: 10px 20px 10px 20px;
 	}
 table{
+	margin-top: 25px;
 	border-collapse: collapse; 
 	text-align: center;
 	box-shadow: 4px 4px 3px black;
+	display:inline-block;
+  	vertical-align:top;
 	}
 
