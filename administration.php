@@ -28,6 +28,7 @@
 		   <li><a href="./index.html" class="first">Accueil</a></li>
 		   <li><a href="./login_gest.php">Gestion</a></li>
 		   <li><a href="./consultation.php">Consultation</a></li>
+		   <li><a href="./mentions_legales.html">Mentions légales</a></li>
     </ul>
    </nav>
    </header><!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style2.css -->

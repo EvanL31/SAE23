@@ -23,7 +23,7 @@
 		   <li><a href="./login_admin.php">Administration</a></li>
 		   <li><a href="./login_gest.php">Gestion</a></li>
 		   <li><a href="./consultation.php">Consultation</a></li>
-		   <li><a href="./mentions_legales.html" class="first">Mentions legales</a></li>
+		   <li><a href="./mentions_legales.html" class="first">Mentions Légales</a></li>
     </ul>
    </nav>
    </header>
@@ -141,7 +141,21 @@ echo "
 </table>
 		"
 ?>
- 
+
+
+ <aside id="last">
+    <hr />
+    <p><em> Validation de la page HTML5 - CSS3 </em></p>
+
+	<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Flaffely.atwebpages.com%2FSAE23%2Fconsultation.php" target="_blank"> 
+		<img class= "image-responsive" src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
+	</a>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
+	<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Flaffely.atwebpages.com%2FSAE23%2Fstyles%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank">
+		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+	</a>
+
+  </aside>
   
   <footer>
     <ul>

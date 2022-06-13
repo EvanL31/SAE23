@@ -9,21 +9,19 @@
 		<meta charset="UTF-8" />
 		<title>Gestion</title>
 		<link rel="stylesheet" type="text/css" href="./styles/style.css" />
-		<link rel="stylesheet" type="text/css" href="./styles/styleRWD.css" />
 	</head>
 
 	<body>
-		<!-- Affichage entete -->
-		<?php 
-			include("entete_gest.html"); 
-		?>
 		<header>
+    		<h1>Gestionnaire</h1>
+    		<hr />
 			<nav class="navbar" >
 			<ul>
-				   <li><a href="./index.html" class="first">Accueil</a></li>
-				   <li><a href="./login_admin.php">Administration</a></li>
-				   <li><a href="./login_gest.php">Gestion</a></li>
-				   <li><a href="./consultation.php">Consultation</a></li>
+				   	<li><a href="./index.html" class="first">Accueil</a></li>
+				   	<li><a href="./login_admin.php">Administration</a></li>
+				   	<li><a href="./login_gest.php">Gestion</a></li>
+				   	<li><a href="./consultation.php">Consultation</a></li>
+		   			<li><a href="./mentions_legales.html"> Mentions Légales</a></li>
 			</ul>
 		   </nav>
 		   </header>
