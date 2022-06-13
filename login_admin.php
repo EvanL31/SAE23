@@ -12,17 +12,16 @@
 	</head>
 
 	<body>
-		<!-- Affichage entete -->
-		<?php 
-			include("entete_admin.html"); 
-		?>
 		<header>
+   			<h1>Administration</h1>
+    		<hr />
 			<nav class="navbar" >
 			<ul>
-				   <li><a href="./index.html" class="first">Accueil</a></li>
-				   <li><a href="./login_admin.php">Administration</a></li>
-				   <li><a href="./login_gest.php">Gestion</a></li>
-				   <li><a href="./consultation.php">Consultation</a></li>
+				   	<li><a href="./index.html" class="first">Accueil</a></li>
+				   	<li><a href="./login_admin.php">Administration</a></li>
+					<li><a href="./login_gest.php">Gestion</a></li>
+				   	<li><a href="./consultation.php">Consultation</a></li>
+		   			<li><a href="./mentions_legales.html"> Mentions Légales</a></li>
 			</ul>
 		   </nav>
 		   </header>

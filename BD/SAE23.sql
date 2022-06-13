@@ -19,9 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `SAE23`
 --
-DROP DATABASE IF EXISTS `SAE23`;
-CREATE DATABASE IF NOT EXISTS `SAE23`;
-USE SAE23;
 
 -- --------------------------------------------------------
 

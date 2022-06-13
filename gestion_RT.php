@@ -40,13 +40,12 @@
 include ("SAE23.php");
 
 				/* Sélection des pieces en fonction de l'interet */
-				$requete = "SELECT * FROM `MESURE` ORDER BY MES_DATE DESC LIMIT 15"
-				$resultat = mysqli_query($id_bd, $requete)
-					or die("Execution de la requete impossible : $requete");
-				mysqli_close($id_bd);
+				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'TE104' ORDER BY MES_DATE DESC LIMIT 15";
+				$result = mysqli_query($id_bd, $request)
+					or die("Execution de la requete impossible : $request");
 				echo '<table>';
 				/* Affichage de la liste des pièces  */
-				while($ligne=mysqli_fetch_assoc($resultat))
+				while($ligne=mysqli_fetch_assoc($result))
 				 {	
 					extract($ligne);
 					echo '<tr>';
@@ -55,6 +54,59 @@ include ("SAE23.php");
 					echo 	"<td> $MES_VAL </td>";
 					echo '</tr>';
 				 }
+				echo '<table>';
+
+				/* Sélection des pieces en fonction de l'interet */
+				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'CE104' ORDER BY MES_DATE DESC LIMIT 15";
+				$result = mysqli_query($id_bd, $request)
+					or die("Execution de la requete impossible : $request");
+				echo '<table>';
+				/* Affichage de la liste des pièces  */
+				while($line=mysqli_fetch_assoc($result))
+				 {	
+					extract($line);
+					echo '<tr>';
+					echo 	"<td> $CAPT_NOM </td>";
+					echo 	"<td> $MES_DATE </td>";
+					echo 	"<td> $MES_VAL </td>";
+					echo '</tr>';
+				 }
+				echo '<table>';
+
+					/* Sélection des pieces en fonction de l'interet */
+				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'CE208' ORDER BY MES_DATE DESC LIMIT 15";
+				$result = mysqli_query($id_bd, $request)
+					or die("Execution de la requete impossible : $request");
+				echo '<table>';
+				/* Affichage de la liste des pièces  */
+				while($line=mysqli_fetch_assoc($result))
+				 {	
+					extract($line);
+					echo '<tr>';
+					echo 	"<td> $CAPT_NOM </td>";
+					echo 	"<td> $MES_DATE </td>";
+					echo 	"<td> $MES_VAL </td>";
+					echo '</tr>';
+				 }
+				echo '<table>';
+
+					/* Sélection des pieces en fonction de l'interet */
+				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'TE208' ORDER BY MES_DATE DESC LIMIT 15";
+				$result = mysqli_query($id_bd, $request)
+					or die("Execution de la requete impossible : $request");
+				echo '<table>';
+				/* Affichage de la liste des pièces  */
+				while($line=mysqli_fetch_assoc($result))
+				 {	
+					extract($line);
+					echo '<tr>';
+					echo 	"<td> $CAPT_NOM </td>";
+					echo 	"<td> $MES_DATE </td>";
+					echo 	"<td> $MES_VAL </td>";
+					echo '</tr>';
+				 }
+				echo '<table>';
+	mysqli_close($id_bd);
 			?>
 
 
