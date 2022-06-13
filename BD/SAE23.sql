@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Ven 03 Juin 2022 à 17:06
+-- Généré le :  Lun 13 Juin 2022 à 09:59
 -- Version du serveur :  5.6.20
 -- Version de PHP :  5.5.15
 
@@ -17,13 +17,14 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Base de données :  `SAE_23`
+-- Base de données :  `SAE23`
 --
-
--- --------------------------------------------------------
 DROP DATABASE IF EXISTS `SAE23`;
 CREATE DATABASE IF NOT EXISTS `SAE23`;
 USE SAE23;
+
+-- --------------------------------------------------------
+
 --
 -- Structure de la table `ADMINISTRATION`
 --
@@ -32,6 +33,13 @@ CREATE TABLE IF NOT EXISTS `ADMINISTRATION` (
   `LOGIN` varchar(15) NOT NULL,
   `PASSWD` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Contenu de la table `ADMINISTRATION`
+--
+
+INSERT INTO `ADMINISTRATION` (`LOGIN`, `PASSWD`) VALUES
+('admin', 'passroot');
 
 -- --------------------------------------------------------
 
@@ -60,19 +68,25 @@ INSERT INTO `BATIMENT` (`BAT_ID`, `BAT_NOM`, `GEST_NOM`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `CAPTEUR` (
-  `CAPT_ID` int(5) NOT NULL,
+`CAPT_ID` int(5) NOT NULL,
   `CAPT_NOM` varchar(15) NOT NULL,
   `CAPT_TYPE` varchar(15) NOT NULL,
-  `BAT_ID` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `BAT_NOM` varchar(15) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Contenu de la table `CAPTEUR`
 --
 
-INSERT INTO `CAPTEUR` (`CAPT_ID`, `CAPT_NOM`, `CAPT_TYPE`, `BAT_ID`) VALUES
-(1, 'TE208', 'temperature', '1'),
-(2, 'CE208', 'co2', '1');
+INSERT INTO `CAPTEUR` (`CAPT_ID`, `CAPT_NOM`, `CAPT_TYPE`, `BAT_NOM`) VALUES
+(2, 'TE208', 'temperature', 'RT'),
+(3, 'TE104', 'temperature', 'RT'),
+(4, 'CE208', 'co2', 'RT'),
+(5, 'CE104', 'co2', 'RT'),
+(6, 'TB103', 'temperature', 'INFO'),
+(8, 'TB204', 'temperature', 'INFO'),
+(9, 'CB103', 'co2', 'INFO'),
+(10, 'CB204', 'co2', 'INFO');
 
 -- --------------------------------------------------------
 
@@ -101,11 +115,11 @@ INSERT INTO `GESTIONNAIRE` (`GEST_NOM`, `LOGIN`, `PASSWORD`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `MESURE` (
-  `MES_ID` int(5) NOT NULL,
+`MES_ID` int(5) NOT NULL,
   `MES_VAL` varchar(30) NOT NULL,
-  `MES_DATE` date NOT NULL,
-  `CAPT_TYPE` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `MES_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `CAPT_NOM` varchar(15) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1148 ;
 
 --
 -- Index pour les tables exportées
@@ -127,7 +141,7 @@ ALTER TABLE `BATIMENT`
 -- Index pour la table `CAPTEUR`
 --
 ALTER TABLE `CAPTEUR`
- ADD PRIMARY KEY (`CAPT_ID`), ADD UNIQUE KEY `CAPT_NOM` (`CAPT_NOM`), ADD UNIQUE KEY `CAPT_TYPE` (`CAPT_TYPE`), ADD KEY `CAPTEUR_ibfk_1` (`BAT_ID`);
+ ADD PRIMARY KEY (`CAPT_ID`), ADD UNIQUE KEY `CAPT_NOM` (`CAPT_NOM`), ADD KEY `CAPTEUR_ibfk_1` (`BAT_NOM`);
 
 --
 -- Index pour la table `GESTIONNAIRE`
@@ -139,8 +153,22 @@ ALTER TABLE `GESTIONNAIRE`
 -- Index pour la table `MESURE`
 --
 ALTER TABLE `MESURE`
- ADD PRIMARY KEY (`MES_ID`), ADD UNIQUE KEY `MES_VAL` (`MES_VAL`), ADD KEY `MESURE_ibfk_1` (`CAPT_TYPE`);
+ ADD PRIMARY KEY (`MES_ID`), ADD KEY `MESURE_ibfk_1` (`CAPT_NOM`);
 
+--
+-- AUTO_INCREMENT pour les tables exportées
+--
+
+--
+-- AUTO_INCREMENT pour la table `CAPTEUR`
+--
+ALTER TABLE `CAPTEUR`
+MODIFY `CAPT_ID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT pour la table `MESURE`
+--
+ALTER TABLE `MESURE`
+MODIFY `MES_ID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1148;
 --
 -- Contraintes pour les tables exportées
 --
@@ -149,19 +177,13 @@ ALTER TABLE `MESURE`
 -- Contraintes pour la table `CAPTEUR`
 --
 ALTER TABLE `CAPTEUR`
-ADD CONSTRAINT `CAPTEUR_ibfk_1` FOREIGN KEY (`BAT_ID`) REFERENCES `BATIMENT` (`BAT_ID`) ON DELETE CASCADE;
-
---
--- Contraintes pour la table `GESTIONNAIRE`
---
-ALTER TABLE `GESTIONNAIRE`
-ADD CONSTRAINT `GESTIONNAIRE_ibfk_1` FOREIGN KEY (`GEST_NOM`) REFERENCES `BATIMENT` (`GEST_NOM`) ON DELETE CASCADE;
+ADD CONSTRAINT `CAPTEUR_ibfk_1` FOREIGN KEY (`BAT_NOM`) REFERENCES `BATIMENT` (`BAT_NOM`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `MESURE`
 --
 ALTER TABLE `MESURE`
-ADD CONSTRAINT `MESURE_ibfk_1` FOREIGN KEY (`CAPT_TYPE`) REFERENCES `CAPTEUR` (`CAPT_TYPE`) ON DELETE CASCADE;
+ADD CONSTRAINT `MESURE_ibfk_1` FOREIGN KEY (`CAPT_NOM`) REFERENCES `CAPTEUR` (`CAPT_NOM`) ON DELETE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
