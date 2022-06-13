@@ -32,7 +32,7 @@
 <h1> Présentation de la page </h1>
 
 <p> Tout d'abord, cette page sert à présenter les mesures des capteurs du bâtiment RT. </p>
-<p> Dans le tableau ci-dessous, vous pouvez voir les salles avec leurs capteurs et dans quel bâtiment il se situe. 
+<p> Dans le tableau ci-dessous, vous pouvez voir les salles avec leurs dates où les données ont été prises et leurs valeurs. 
 
 <h2> Affichage des mesures des capteurs du bâtiment RT </h2>
 
@@ -44,6 +44,9 @@ include ("SAE23.php");
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
 				echo '<table>';
+					echo "<th> Salle </th>";
+					echo "<th> Date et Heure </th>";
+					echo "<th> Valeurs </th>";
 				/* Affichage de la liste des pièces  */
 				while($ligne=mysqli_fetch_assoc($result))
 				 {	
@@ -54,13 +57,23 @@ include ("SAE23.php");
 					echo 	"<td> $MES_VAL </td>";
 					echo '</tr>';
 				 }
+<<<<<<< HEAD
 				echo '<table>';
+=======
+				echo '</table>';
+>>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
 
 				/* Sélection des pieces en fonction de l'interet */
 				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'CE104' ORDER BY MES_DATE DESC LIMIT 15";
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
 				echo '<table>';
+<<<<<<< HEAD
+=======
+					echo "<th> Salle </th>";
+					echo "<th> Date et Heure </th>";
+					echo "<th> Valeurs </th>";
+>>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
 				/* Affichage de la liste des pièces  */
 				while($line=mysqli_fetch_assoc($result))
 				 {	
@@ -71,13 +84,23 @@ include ("SAE23.php");
 					echo 	"<td> $MES_VAL </td>";
 					echo '</tr>';
 				 }
+<<<<<<< HEAD
 				echo '<table>';
+=======
+				echo '</table>';
+>>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
 
 					/* Sélection des pieces en fonction de l'interet */
 				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'CE208' ORDER BY MES_DATE DESC LIMIT 15";
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
 				echo '<table>';
+<<<<<<< HEAD
+=======
+					echo "<th> Salle </th>";
+					echo "<th> Date et Heure </th>";
+					echo "<th> Valeurs </th>";
+>>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
 				/* Affichage de la liste des pièces  */
 				while($line=mysqli_fetch_assoc($result))
 				 {	
@@ -88,13 +111,23 @@ include ("SAE23.php");
 					echo 	"<td> $MES_VAL </td>";
 					echo '</tr>';
 				 }
+<<<<<<< HEAD
 				echo '<table>';
+=======
+				echo '</table>';
+>>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
 
 					/* Sélection des pieces en fonction de l'interet */
 				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'TE208' ORDER BY MES_DATE DESC LIMIT 15";
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
 				echo '<table>';
+<<<<<<< HEAD
+=======
+					echo "<th> Salle </th>";
+					echo "<th> Date et Heure </th>";
+					echo "<th> Valeurs </th>";
+>>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
 				/* Affichage de la liste des pièces  */
 				while($line=mysqli_fetch_assoc($result))
 				 {	
@@ -105,7 +138,11 @@ include ("SAE23.php");
 					echo 	"<td> $MES_VAL </td>";
 					echo '</tr>';
 				 }
+<<<<<<< HEAD
 				echo '<table>';
+=======
+				echo '</table>';
+>>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
 	mysqli_close($id_bd);
 			?>
 
