@@ -9,14 +9,14 @@
   <meta name="author" content="JG" />
   <meta name="description" content="SAÉ 23" />
   <meta name="keywords" content="HTML, CSS" />
-  <meta HTTP-EQUIV="Refresh" CONTENT="10; URL=http://192.168.101.162/SAE23/consultation.php"> 
+  <meta HTTP-EQUIV="Refresh" CONTENT="10; URL=http://192.168.101.177/SAE23/consultation.php"> 
  </head>
 
  <body>
  
   <header>
    <h1>  Consultation des mesures </h1>
-    <!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style1.css -->
+    <hr>
 	<nav class="navbar" >
     <ul>
 		   <li><a href="./index.html" class="first">Accueil</a></li>

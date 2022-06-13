@@ -1,7 +1,7 @@
 <?php
 /* Script de connexion à la base smi */
 
-  $id_bd = mysqli_connect("192.168.101.162","laffely","evan","SAE23")
+  $id_bd = mysqli_connect("192.168.101.177","laffely","evan","SAE23")
     or die("Connexion au serveur et/ou à la base de données impossible");
 
   /* Gestion de l'encodage des caractères */
