@@ -57,23 +57,18 @@ include ("SAE23.php");
 					echo 	"<td> $MES_VAL </td>";
 					echo '</tr>';
 				 }
-<<<<<<< HEAD
-				echo '<table>';
-=======
 				echo '</table>';
->>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
+
 
 				/* Sélection des pieces en fonction de l'interet */
 				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'CE104' ORDER BY MES_DATE DESC LIMIT 15";
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
 				echo '<table>';
-<<<<<<< HEAD
-=======
 					echo "<th> Salle </th>";
 					echo "<th> Date et Heure </th>";
 					echo "<th> Valeurs </th>";
->>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
+
 				/* Affichage de la liste des pièces  */
 				while($line=mysqli_fetch_assoc($result))
 				 {	
@@ -84,23 +79,19 @@ include ("SAE23.php");
 					echo 	"<td> $MES_VAL </td>";
 					echo '</tr>';
 				 }
-<<<<<<< HEAD
-				echo '<table>';
-=======
 				echo '</table>';
->>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
+
 
 					/* Sélection des pieces en fonction de l'interet */
 				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'CE208' ORDER BY MES_DATE DESC LIMIT 15";
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
 				echo '<table>';
-<<<<<<< HEAD
-=======
+
 					echo "<th> Salle </th>";
 					echo "<th> Date et Heure </th>";
 					echo "<th> Valeurs </th>";
->>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
+
 				/* Affichage de la liste des pièces  */
 				while($line=mysqli_fetch_assoc($result))
 				 {	
@@ -111,23 +102,19 @@ include ("SAE23.php");
 					echo 	"<td> $MES_VAL </td>";
 					echo '</tr>';
 				 }
-<<<<<<< HEAD
-				echo '<table>';
-=======
 				echo '</table>';
->>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
+
 
 					/* Sélection des pieces en fonction de l'interet */
 				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'TE208' ORDER BY MES_DATE DESC LIMIT 15";
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
 				echo '<table>';
-<<<<<<< HEAD
-=======
+
 					echo "<th> Salle </th>";
 					echo "<th> Date et Heure </th>";
 					echo "<th> Valeurs </th>";
->>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
+
 				/* Affichage de la liste des pièces  */
 				while($line=mysqli_fetch_assoc($result))
 				 {	
@@ -138,35 +125,10 @@ include ("SAE23.php");
 					echo 	"<td> $MES_VAL </td>";
 					echo '</tr>';
 				 }
-<<<<<<< HEAD
-				echo '<table>';
-=======
 				echo '</table>';
->>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
 	mysqli_close($id_bd);
 			?>
 
-
-<aside id="last">
-    <hr />
-    <p><em> Validation de la page HTML5 - CSS3 </em></p>
-
-	<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fgarandet.atwebpages.com%2FSAE14%2Findex.html" target="_blank"> 
-		<img class= "image-responsive" src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
-	</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
-	<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgarandet.atwebpages.com%2FSAE14%2Fstyles%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank">
-		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
-	</a>
-
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
-	<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgarandet.atwebpages.com%2FSAE14%2Fstyles%2Fstyle2RWD.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank">
-		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS2RWD Valide !" />
-
-	</a>
-  </aside>
-  
-  
   <footer>
     <ul>
 		<li>Groupe GLFA</li>
