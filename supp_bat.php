@@ -21,7 +21,8 @@
  <body>
  
   <header>
-   <h1>  Administration </h1>
+   <h1>  Suppression d'un bâtiment 
+</h1>
     <!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style1.css -->
 	<nav class="navbar" >
     <ul>
@@ -32,22 +33,15 @@
 		   <li><a href="./mentions_legales.html">Mentions légales</a></li>
     </ul>
    </nav>
-   </header><!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style2.css -->
-  
-<section>
-	<h2> Ajout/Suppression de bâtiment </h2>
-	<a href="./ajout_bat.php" class="bouton">Ajout</a>
-	<a href="./supp_bat.php" class="bouton">Suppression</a>
-</section>
-
-<section>
-	<h2> Ajout/Suppression de capteur </h2>
-	<a href="./ajout_capt.php" class="bouton">Ajout</a>
-	<a href="./supp_capt.php" class="bouton">Suppression</a>
-</section>
 
 
-  <footer>
+aller niquer vos mères
+
+
+
+ </body>
+
+ <footer>
     <ul>
 		<li>Groupe GFLI</li>
 		<li>SAÉ 23</li>
