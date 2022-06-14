@@ -9,7 +9,7 @@
   <meta name="author" content="JG" />
   <meta name="description" content="SAÉ 23" />
   <meta name="keywords" content="HTML, CSS" />
-  <meta HTTP-EQUIV="Refresh" CONTENT="10; URL=http://192.168.101.177/SAE23/consultation.php"> 
+  <meta HTTP-EQUIV="Refresh" CONTENT="30; URL=http://192.168.101.185/SAE23/consultation.php"> 
  </head>
 
  <body>
@@ -96,7 +96,7 @@
 					}
 	mysqli_close($id_bd);
 echo "
-	<table>
+	<table class=\"consult\">
   <tr> 
     <td COLSPAN=\"4\">BAT RT</td>
   </tr>
@@ -111,14 +111,14 @@ echo "
     <td>CO2</td>
   </tr>
   <tr> 
-    <td>$TE208</td>
-    <td>$CE208</td>
-    <td>$TE104</td>
-    <td>$CE104</td>
+    <td>$TE208 °C</td>
+    <td>$CE208 ppm</td>
+    <td>$TE104 °C</td>
+    <td>$CE104 ppm</td>
   </tr>
 </table>
 
-<table>
+<table class=\"consult\">
   <tr> 
     <td COLSPAN=\"4\">BAT INFO</td>
   </tr>
@@ -133,29 +133,14 @@ echo "
     <td>CO2</td>
   </tr>
   <tr> 
-    <td>$TB103</td>
-    <td>$CB103</td>
-    <td>$TB204</td>
-    <td>$CB204</td>
+    <td>$TB103 °C</td>
+    <td>$CB103 ppm</td>
+    <td>$TB204 °C</td>
+    <td>$CB204 ppm</td>
   </tr>
 </table>
 		"
 ?>
-
-
- <aside id="last">
-    <hr />
-    <p><em> Validation de la page HTML5 - CSS3 </em></p>
-
-	<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Flaffely.atwebpages.com%2FSAE23%2Fconsultation.php" target="_blank"> 
-		<img class= "image-responsive" src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
-	</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
-	<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Flaffely.atwebpages.com%2FSAE23%2Fstyles%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank">
-		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
-	</a>
-
-  </aside>
   
   <footer>
     <ul>

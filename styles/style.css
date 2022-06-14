@@ -67,9 +67,13 @@ body
   {
   	background-color: #DCDCDC;
   }
+.mention
+{
+	margin-bottom: 100px;
+}
 footer 
   {
-    position: fixed;
+	position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
