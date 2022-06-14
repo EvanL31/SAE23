@@ -99,21 +99,49 @@ footer
   {
     float:right;
     text-align: right;
+	margin-right: 10px;
   }
-td
-	{
-	border: 2px solid black;
-	padding: 10px 20px 10px 20px;
-	}
-table{
-	margin-top: 25px;
-	border-collapse: collapse; 
-	text-align: center;
-	box-shadow: 4px 4px 3px black;
-	background-color: white;
-	display:inline-block;
-  	vertical-align:top;
-	margin-bottom: 30px;
-	margin-left: 50px;
-	}
 
+table {
+border:3px solid #6495ed;
+border-collapse:collapse;
+width:50%;
+margin: auto;
+margin-bottom: 20px;
+margin-top: 30px;
+}
+thead, tfoot {
+background-color:#D0E3FA;
+background-image:url(sky.jpg);
+border:1px solid #6495ed;
+}
+tbody {
+background-color:#FFFFFF;
+border:1px solid #6495ed;
+}
+th {
+font-family:monospace;
+border:1px dotted #6495ed;
+padding:5px;
+background-color:#9cbbe4;
+width:25%;
+font-size: 16px;
+}
+td {
+font-family:sans-serif;
+font-size:80%;
+border:1px solid #6495ed;
+padding:5px;
+text-align:center;
+}
+caption {
+font-family:sans-serif;
+}
+
+.fin {
+	margin-bottom: 100px;
+}
+
+.centre {
+	text-align: center;
+}
