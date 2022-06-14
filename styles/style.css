@@ -1,98 +1,147 @@
-/* CSS style2 adaptatif */
-a
-{
-	color:cyan;
-	font-size: 140%;
-}
-
-em
-{
-	font-size: 125%;
-}
-
-body
-{
-	background-color:gray;
-	font-family:'Arial Narrow Bold';
-}
-
-h2
-{
-	font-size: 250%;
-	text-align: center;
-	color:orange;
-}
-
-h3
-{
-	color:tomato;
-	font-size: 235%;
-}
-
-p
-{
-	font-size: 150%;
-	text-align: left;
-}
-
-.navbar a 
-{
-	font-weight:bold;
-	font-size:170%;
-	font-family:'Arial Narrow Bold';
-	color:orange;
-	background-color:dimgray;
-}
-
-h1
-{
-	font-size:235%;
-	color:orange;
-}
-
 header
-{
-	background-color:#303030;
-}
-
-footer
-{
-	background-color:gray;
-	color:orange;
-	font-weight: bold;
-	bottom:0;
-	width:100%;
-	padding-top:20px;
-	height:50px;
-	font-size: 12px;
-}
-
-section
-{
-	border: 1px solid Black;
-	border-color:darkorange;
-	border-width: 3px;
-	border-spacing:30px;
-	background-color:darkslategrey;
-	color: orange;
-	border-radius: 30px;
-	margin:3%;
-}
-
-strong
-{
-	color:red;
-	font-size: 35px;
-}
-
-
-img
-{
+ {
+	top: 0;
+	left: 0;
 	width: 100%;
+	background-color: #52414C ;
+	color : white;
+	text-align: center;
+	margin-top: 0px;
+	margin-left:0px;
+	margin-right:0px;
+	padding-top: 10px;
+  }
+
+ nav ul 
+ {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: blue;
+	border-radius:15px;
 }
 
-.first
+nav ul li
+	{
+	float:left;
+	border-right: 1px solid #BBBBBB;
+	color: #FFFACC;
+	}
+nav ul li: last-child
+	{
+	border-right: none;
+	float:right;
+	border-left: 1px solid #BBBBBB;
+	}
+
+nav ul li a
+	{
+	display: block;
+	color: #FFFACC;
+	padding: 15px;
+	text-align: center;
+	text-decoration: none;
+	}
+
+nav ul li:hover
+	{
+	background-color: black;
+	}
+
+aside#last 
+  {
+    padding-top: 25px;	
+    padding-left: 20px;
+    padding-right: 15px;
+    padding-bottom: 90px;
+  }
+
+  aside a img
+  {
+  	border:0;
+  	width:88px;
+  	height:31px
+  } 
+body 
+  {
+  	background-color: #DCDCDC;
+  }
+.mention
 {
-	margin-top: 6%;
+	margin-bottom: 100px;
+}
+footer 
+  {
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 15px;
+    background-color: #00008B;
+    color: white;
+    text-align: center;
+  }
+
+  footer ul li
+  {
+    float: left;
+    width:33%;
+    list-style-type: none;
+  }
+
+  footer ul li:first-child
+  {
+    text-align: left;
+  }
+
+  footer ul li:last-child
+  {
+    float:right;
+    text-align: right;
+	margin-right: 10px;
+  }
+
+table {
+border:3px solid #6495ed;
+border-collapse:collapse;
+width:50%;
+margin: auto;
+margin-bottom: 20px;
+margin-top: 30px;
+}
+thead, tfoot {
+background-color:#D0E3FA;
+background-image:url(sky.jpg);
+border:1px solid #6495ed;
+}
+tbody {
+background-color:#FFFFFF;
+border:1px solid #6495ed;
+}
+th {
+font-family:monospace;
+border:1px dotted #6495ed;
+padding:5px;
+background-color:#9cbbe4;
+width:25%;
+font-size: 16px;
+}
+td {
+font-family:sans-serif;
+font-size:80%;
+border:1px solid #6495ed;
+padding:5px;
+text-align:center;
+}
+caption {
+font-family:sans-serif;
 }
 
+.fin {
+	margin-bottom: 100px;
+}
+
+.centre {
+	text-align: center;
+}

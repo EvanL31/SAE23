@@ -21,68 +21,119 @@
     <ul>
 		   <li><a href="./index.html" class="first">Accueil</a></li>
 		   <li><a href="./login_admin.php">Administration</a></li>
+		   <li><a href="./login_gest.php">Gestion</a></li>
 		   <li><a href="./consultation.php">Consultation</a></li>
+		   <li><a href="./mentions_legales.html">Mentions légales</a></li>
     </ul>
    </nav>
    </header><!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style2.css -->
   
 
-  <div id="container">
-            <!-- zone de connexion -->
-            
-         <form action="verification.php" method="POST">
-                <h1>Connexion</h1>
-                
-                <label><b>Nom d'utilisateur</b></label>
-                <input type="text" placeholder="Entrer le nom d'utilisateur" name="username" required>
+<h1> Présentation de la page </h1>
 
-                <label><b>Mot de passe</b></label>
-                <input type="password" placeholder="Entrer le mot de passe" name="password" required>
+<p> Tout d'abord, cette page sert à présenter les mesures des capteurs du bâtiment RT. </p>
+<p> Dans le tableau ci-dessous, vous pouvez voir les salles avec leurs dates où les données ont été prises et leurs valeurs. 
 
-                <input type="submit" id='submit' value='LOGIN' >
-                <?php
-                if(isset($_GET['erreur'])){
-                    $err = $_GET['erreur'];
-                    if($err==1 || $err==2)
-                        echo "<p style='color:red'>Utilisateur ou mot de passe incorrect</p>";
-                }
-                ?>
-            </form>
-        </div>
+<h2> Affichage des mesures des capteurs du bâtiment RT </h2>
+
+<?php
+include ("SAE23.php");
+
+				/* Sélection des pieces en fonction de l'interet */
+				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'TE104' ORDER BY MES_DATE DESC LIMIT 15";
+				$result = mysqli_query($id_bd, $request)
+					or die("Execution de la requete impossible : $request");
+				echo '<table>';
+					echo "<th> Salle </th>";
+					echo "<th> Date et Heure </th>";
+					echo "<th> Valeurs </th>";
+				/* Affichage de la liste des pièces  */
+				while($ligne=mysqli_fetch_assoc($result))
+				 {	
+					extract($ligne);
+					echo '<tr>';
+					echo 	"<td> $CAPT_NOM </td>";
+					echo 	"<td> $MES_DATE </td>";
+					echo 	"<td> $MES_VAL </td>";
+					echo '</tr>';
+				 }
+				echo '</table>';
 
 
+				/* Sélection des pieces en fonction de l'interet */
+				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'CE104' ORDER BY MES_DATE DESC LIMIT 15";
+				$result = mysqli_query($id_bd, $request)
+					or die("Execution de la requete impossible : $request");
+				echo '<table>';
+					echo "<th> Salle </th>";
+					echo "<th> Date et Heure </th>";
+					echo "<th> Valeurs </th>";
+
+				/* Affichage de la liste des pièces  */
+				while($line=mysqli_fetch_assoc($result))
+				 {	
+					extract($line);
+					echo '<tr>';
+					echo 	"<td> $CAPT_NOM </td>";
+					echo 	"<td> $MES_DATE </td>";
+					echo 	"<td> $MES_VAL </td>";
+					echo '</tr>';
+				 }
+				echo '</table>';
 
 
+					/* Sélection des pieces en fonction de l'interet */
+				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'CE208' ORDER BY MES_DATE DESC LIMIT 15";
+				$result = mysqli_query($id_bd, $request)
+					or die("Execution de la requete impossible : $request");
+				echo '<table>';
+
+					echo "<th> Salle </th>";
+					echo "<th> Date et Heure </th>";
+					echo "<th> Valeurs </th>";
+
+				/* Affichage de la liste des pièces  */
+				while($line=mysqli_fetch_assoc($result))
+				 {	
+					extract($line);
+					echo '<tr>';
+					echo 	"<td> $CAPT_NOM </td>";
+					echo 	"<td> $MES_DATE </td>";
+					echo 	"<td> $MES_VAL </td>";
+					echo '</tr>';
+				 }
+				echo '</table>';
 
 
+					/* Sélection des pieces en fonction de l'interet */
+				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'TE208' ORDER BY MES_DATE DESC LIMIT 15";
+				$result = mysqli_query($id_bd, $request)
+					or die("Execution de la requete impossible : $request");
+				echo '<table>';
 
+					echo "<th> Salle </th>";
+					echo "<th> Date et Heure </th>";
+					echo "<th> Valeurs </th>";
 
+				/* Affichage de la liste des pièces  */
+				while($line=mysqli_fetch_assoc($result))
+				 {	
+					extract($line);
+					echo '<tr>';
+					echo 	"<td> $CAPT_NOM </td>";
+					echo 	"<td> $MES_DATE </td>";
+					echo 	"<td> $MES_VAL </td>";
+					echo '</tr>';
+				 }
+				echo '</table>';
+	mysqli_close($id_bd);
+			?>
 
-<aside id="last">
-    <hr />
-    <p><em> Validation de la page HTML5 - CSS3 </em></p>
-
-	<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fgarandet.atwebpages.com%2FSAE14%2Findex.html" target="_blank"> 
-		<img class= "image-responsive" src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
-	</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
-	<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgarandet.atwebpages.com%2FSAE14%2Fstyles%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank">
-		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
-	</a>
-
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
-	<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgarandet.atwebpages.com%2FSAE14%2Fstyles%2Fstyle2RWD.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank">
-		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS2RWD Valide !" />
-
-	</a>
-  </aside>
-  
-  
   <footer>
     <ul>
-		<li>Groupe GFLI</li>
+		<li>Groupe GLFA</li>
 		<li>SAÉ 23</li>
-		<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
+		<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tel: +33 (0)562747575</li>
 	</ul>  
   </footer>
   </body>

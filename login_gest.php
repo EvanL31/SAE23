@@ -9,21 +9,29 @@
 		<meta charset="UTF-8" />
 		<title>Gestion</title>
 		<link rel="stylesheet" type="text/css" href="./styles/style.css" />
-		<link rel="stylesheet" type="text/css" href="./styles/styleRWD.css" />
 	</head>
 
 	<body>
-		<!-- Affichage entete -->
-		<?php 
-			include("entete_gest.html"); 
-		?>
+		<header>
+    		<h1>Gestionnaire</h1>
+    		<hr />
+			<nav class="navbar" >
+			<ul>
+				   	<li><a href="./index.html" class="first">Accueil</a></li>
+				   	<li><a href="./login_admin.php">Administration</a></li>
+				   	<li><a href="./login_gest.php">Gestion</a></li>
+				   	<li><a href="./consultation.php">Consultation</a></li>
+		   			<li><a href="./mentions_legales.html"> Mentions Légales</a></li>
+			</ul>
+		   </nav>
+		   </header>
 		<section>
 			<p>
 				<br />
 				<em><strong>Gestion de la base : Acc&egrave;s limit&eacute; aux personnes autoris&eacute;es</strong></em>
 				<br />
 			</p>
-			<form action="log_admin.php" method="post" enctype="multipart/form-data">
+			<form action="log_gest.php" method="post" enctype="multipart/form-data">
 				<fieldset>
 					<legend>Saisissez le login !!</legend>
 					<label for="log">Login : </label>
@@ -38,11 +46,13 @@
 			</form>
 			<hr />
 		</section>
-		<footer>
-			<p><a href="consultation.php">Page de consultation</a></p>
-			<p><a href="login_admin.php">Page d'administration</a></p>
-			<p><a href="index.html">Retour à l'accueil</a></p>
-		</footer>
+ 		<footer>
+   			<ul>
+				<li>Groupe GFLA</li>
+				<li>SAE 23</li>
+				<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
+			</ul>  
+  		</footer>
 	</body>
 </html>
 

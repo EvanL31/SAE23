@@ -28,40 +28,10 @@
 		   <li><a href="./index.html" class="first">Accueil</a></li>
 		   <li><a href="./login_gest.php">Gestion</a></li>
 		   <li><a href="./consultation.php">Consultation</a></li>
+		   <li><a href="./mentions_legales.html">Mentions légales</a></li>
     </ul>
    </nav>
    </header><!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style2.css -->
-
-
-
-
-
-
-
-
-
-
-
-
-<aside id="last">
-    <hr />
-    <p><em> Validation de la page HTML5 - CSS3 </em></p>
-
-	<a href="https://validator.w3.org/nu/?doc=http%3A%2F%2Fgarandet.atwebpages.com%2FSAE14%2Findex.html" target="_blank"> 
-		<img class= "image-responsive" src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
-	</a>
-	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
-	<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgarandet.atwebpages.com%2FSAE14%2Fstyles%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank">
-		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
-	</a>
-
-		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  <!-- style1RWD.css ou style2RWD.css selon votre choix -->
-	<a href="https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fgarandet.atwebpages.com%2FSAE14%2Fstyles%2Fstyle2RWD.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=fr" target="_blank">
-		<img class= "image-responsive" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS2RWD Valide !" />
-
-	</a>
-  </aside>
-  
   
   <footer>
     <ul>
