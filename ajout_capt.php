@@ -20,7 +20,7 @@
 
  	<body>
  		<header>
-   			<h1> Suppression d'un b&acirc;timent </h1>
+   			<h1> Ajout d'un capteur </h1>
 			<nav class="navbar" >
     		<ul>
 		   		<li><a href="./index.html" class="first">Accueil</a></li>
@@ -36,7 +36,7 @@
 			<br />
 			<form action="ajoutbat.php" method="post" enctype="multipart/form-data">
 				<fieldset>
-					<legend> Suppression d'un b&acirc;timent </legend>
+					<legend> Ajout d'un capteur </legend>
 					<label for="type"><strong>Type de la pi&egrave;ce à ajouter : <?php echo $type ?></strong></label>
 					<input type="hidden" name="CodeType" value="<?php echo $type ?>" id ="type" />
 					<br />

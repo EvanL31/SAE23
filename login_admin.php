@@ -21,7 +21,7 @@
 				   	<li><a href="./login_admin.php">Administration</a></li>
 					<li><a href="./login_gest.php">Gestion</a></li>
 				   	<li><a href="./consultation.php">Consultation</a></li>
-		   			<li><a href="./mentions_legales.html"> Mentions Légales</a></li>
+		   			<li><a href="./mentions_legales.html"> Mentions L&eacute;gales</a></li>
 			</ul>
 		   </nav>
 		   </header>

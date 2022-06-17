@@ -5,11 +5,11 @@
   <link rel="icon" href="./images/initiales.jpg" />
   <title> Consultation </title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Pour bien gérer le RWD -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="JG" />
   <meta name="description" content="SAÉ 23" />
   <meta name="keywords" content="HTML, CSS" />
-  <meta HTTP-EQUIV="Refresh" CONTENT="30; URL=http://192.168.101.185/SAE23/consultation.php"> 
+  <meta HTTP-EQUIV="Refresh" CONTENT="10; URL=http://192.168.101.185/SAE23/consultation.php"> 
  </head>
 
  <body>
@@ -23,7 +23,7 @@
 		   <li><a href="./login_admin.php">Administration</a></li>
 		   <li><a href="./login_gest.php">Gestion</a></li>
 		   <li><a href="./consultation.php">Consultation</a></li>
-		   <li><a href="./mentions_legales.html" class="first">Mentions Légales</a></li>
+		   <li><a href="./mentions_legales.html" class="first">Mentions L&eacute;gales</a></li>
     </ul>
    </nav>
    </header>

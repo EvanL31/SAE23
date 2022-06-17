@@ -2,13 +2,15 @@ Liste des fichiers du site web et signification:
 
 index.html : Page d'accueil du Site Web
 
-consultation.php : Page de consultationde la dernière mesure de chaque capteur
+mentions_legales.html : Page des mentions légales du Site Web
+
+consultation.php : Page de consultation de la dernière mesure de chaque capteur
 
 login_admin.php : Page de rentrée du login/mot de passe de l'administrateur
 
 log_admin.php : Page de vérification du login/mot de passe de l'administrateur
 
-administration.php : Page d'ajout/suppression de capteurs/bâtiments et de visualisation des X dernières mesures
+administration.php : Page d'ajout/suppression de capteurs/bâtiments
 
 login_gest : Page de rentrée du login/mot de passe d'un gestionnaire
 
@@ -23,3 +25,11 @@ login_error.php : Page de redirection en cas de mauvaise rentrée d'un login/mot
 entete_admin.html : Entête servant dans la page "login_admin.php"
 
 entete_gest.html : Entête servant dans la page "login_gest.php"
+
+ajout_bat.php : Page de rentrée du bâtiment à ajouter à la Base de Données
+
+ajout_capt.php : Page de rentrée du capteur à ajouter dans la Base de Données
+
+supp_bat.php : Page de rentrée du bâtiment à supprimer de la Base de Données
+
+supp_capt.php : Page de rentére du capteur à supprimer de la Base de Données

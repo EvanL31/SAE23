@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Lun 13 Juin 2022 à 09:59
+-- Généré le :  Jeu 16 Juin 2022 à 09:52
 -- Version du serveur :  5.6.20
 -- Version de PHP :  5.5.15
 
@@ -19,11 +19,9 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `SAE23`
 --
-<<<<<<< HEAD
-=======
-
->>>>>>> 3bd767806920a4bb37f559000610372e372c8cb1
-
+DROP DATABASE IF EXISTS `SAE23`;
+CREATE DATABASE IF NOT EXISTS SAE23;
+USE SAE23
 -- --------------------------------------------------------
 
 --
@@ -120,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `MESURE` (
   `MES_VAL` varchar(30) NOT NULL,
   `MES_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `CAPT_NOM` varchar(15) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1148 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2960 ;
 
 --
 -- Index pour les tables exportées
@@ -169,10 +167,16 @@ MODIFY `CAPT_ID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 -- AUTO_INCREMENT pour la table `MESURE`
 --
 ALTER TABLE `MESURE`
-MODIFY `MES_ID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=1148;
+MODIFY `MES_ID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2960;
 --
 -- Contraintes pour les tables exportées
 --
+
+--
+-- Contraintes pour la table `BATIMENT`
+--
+ALTER TABLE `BATIMENT`
+ADD CONSTRAINT `BATIMENT_ibfk_1` FOREIGN KEY (`GEST_NOM`) REFERENCES `GESTIONNAIRE` (`GEST_NOM`) ON DELETE CASCADE;
 
 --
 -- Contraintes pour la table `CAPTEUR`

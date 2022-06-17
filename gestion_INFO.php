@@ -6,7 +6,7 @@
   <link rel="icon" href="./images/initiales.jpg" />
   <title> Gestionnaire INFO </title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Pour bien gérer le RWD -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="JG" />
   <meta name="description" content="SAÉ 23" />
   <meta name="keywords" content="HTML, CSS" />
@@ -16,17 +16,17 @@
  
   <header>
    <h1>  Consultation des mesures du bâtiment INFO </h1>
-    <!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style1.css -->
+
 	<nav class="navbar" >
     <ul>
 		   <li><a href="./index.html" class="first">Accueil</a></li>
 		   <li><a href="./login_admin.php">Administration</a></li>
 		   <li><a href="./login_gest.php">Gestion</a></li>
 		   <li><a href="./consultation.php">Consultation</a></li>
-		   <li><a href="./mentions_legales.html">Mentions légales</a></li>
+		   <li><a href="./mentions_legales.html">Mentions l&eacute;gales</a></li>
     </ul>
    </nav>
-   </header><!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style2.css -->
+   </header>
   
 	<h1> Présentation de la page </h1>
 
