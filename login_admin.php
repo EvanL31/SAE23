@@ -6,10 +6,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<meta charset="UTF-8" />
-		<title>Administration</title>
-		<link rel="stylesheet" type="text/css" href="./styles/style.css" />
-	</head>
+ 		<link rel="stylesheet" type="text/css" href="./styles/styleRWD.css" />
+ 		<link rel="stylesheet" type="text/css" href="./styles/style.css" />
+  		<link rel="icon" href="./images/initiales.jpg" />
+  		<title> Administrateur </title>
+  		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1" />
+  		<meta name="author" content="GFLA" />
+ 		<meta name="description" content="SAÉ 23" />
+ 		<meta name="keywords" content="HTML, CSS" />
+ 	</head>
 
 	<body>
 		<header>
@@ -21,7 +27,7 @@
 				   	<li><a href="./login_admin.php">Administration</a></li>
 					<li><a href="./login_gest.php">Gestion</a></li>
 				   	<li><a href="./consultation.php">Consultation</a></li>
-		   			<li><a href="./mentions_legales.html"> Mentions L&eacute;gales</a></li>
+		   			<li><a href="./mentions_legales.html" class="last"> Mentions L&eacute;gales</a></li>
 			</ul>
 		   </nav>
 		   </header>

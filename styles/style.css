@@ -2,15 +2,21 @@ header
  {
 	top: 0;
 	left: 0;
-	width: 100%;
-	background-color: #52414C ;
+	width: auto;
+	background: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%) ;
 	color : white;
 	text-align: center;
 	margin-top: 0px;
 	margin-left:0px;
 	margin-right:0px;
 	padding-top: 10px;
+	padding:10px
   }
+
+body {
+	padding:0;
+	margin:0;
+}
 
  nav ul 
  {
@@ -18,21 +24,14 @@ header
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: blue;
-	border-radius:15px;
+	background: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%);
 }
 
 nav ul li
 	{
 	float:left;
-	border-right: 1px solid #BBBBBB;
+	
 	color: #FFFACC;
-	}
-nav ul li: last-child
-	{
-	border-right: none;
-	float:right;
-	border-left: 1px solid #BBBBBB;
 	}
 
 nav ul li a
@@ -46,27 +45,16 @@ nav ul li a
 
 nav ul li:hover
 	{
-	background-color: black;
+	background-color: rgba(63, 63, 63, 0.623);
 	}
-
-aside#last 
-  {
-    padding-top: 25px;	
-    padding-left: 20px;
-    padding-right: 15px;
-    padding-bottom: 90px;
-  }
 
   aside a img
   {
   	border:0;
   	width:88px;
   	height:31px
-  } 
-body 
-  {
-  	background-color: #DCDCDC;
   }
+
 .mention
 {
 	margin-bottom: 100px;
@@ -78,7 +66,7 @@ footer
     bottom: 0;
     width: 100%;
     padding-bottom: 15px;
-    background-color: #00008B;
+    background: linear-gradient(-225deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%) ;
     color: white;
     text-align: center;
   }
@@ -95,20 +83,13 @@ footer
     text-align: left;
   }
 
-  footer ul li:last-child
-  {
-    float:right;
-    text-align: right;
-	margin-right: 10px;
-  }
-
 table {
 border:3px solid #6495ed;
 border-collapse:collapse;
 width:50%;
 margin: auto;
 margin-bottom: 20px;
-margin-top: 30px;
+margin-top: 30px;élément
 }
 thead, tfoot {
 background-color:#D0E3FA;
@@ -144,4 +125,61 @@ font-family:sans-serif;
 
 .centre {
 	text-align: center;
+}
+
+h2, h3, p {
+	padding-left: 10px;
+}
+
+.boutonbis a {
+	display:block;
+	width:150px;
+	line-height:20px;
+	text-align:center;
+	vertical-align:middle;
+	background:url(../images/bouton-noir.png) no-repeat;
+	color:white;
+	text-decoration:none;
+	padding-top: 7px;
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.boutonbis a:hover {
+	background:url(../images/bouton-noir-2.png) no-repeat;
+}
+
+.admin {
+	border-width:5px;
+	border-style:outset;
+	border-color:black;
+	margin-left: 35em;
+	margin-right: 50em;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	padding: 15px;
+	background-color: rgb(184, 184, 184);
+
+}
+
+.bouton a {
+	display:block;
+	width:150px;
+	line-height:50px;
+	text-align:center;
+	vertical-align:middle;
+	background:url(../images/bouton-noir.png) no-repeat;
+	color:white;
+	text-decoration:none;
+	margin-bottom: 15px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+.bouton a:hover {
+	background:url(../images/bouton-noir-2.png) no-repeat;
 }

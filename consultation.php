@@ -6,7 +6,7 @@
   <title> Consultation </title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="author" content="JG" />
+  <meta name="author" content="GFLA" />
   <meta name="description" content="SAÉ 23" />
   <meta name="keywords" content="HTML, CSS" />
   <meta HTTP-EQUIV="Refresh" CONTENT="10; URL=http://192.168.101.185/SAE23/consultation.php"> 

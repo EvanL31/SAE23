@@ -28,50 +28,38 @@
 				<li><a href="./login_admin.php">Administration</a></li>
 		   		<li><a href="./login_gest.php">Gestion</a></li>
 		   		<li><a href="./consultation.php">Consultation</a></li>
-		   		<li><a href="./mentions_legales.html">Mentions l&eacute;gales</a></li>
+		   		<li><a href="./mentions_legales.html" class="last">Mentions l&eacute;gales</a></li>
     		</ul>
    			</nav>
-   		</header>	
- 
-		<section>
-			<br />
-			<form action="suppbat.php" method="post" enctype="multipart/form-data">
-				<fieldset>
-					<legend> Suppression d'un b&acirc;timent </legend>
-					<table>
-						<th> Id du batiment </th>
-						<th> Nom du batiment </th>
-						<th> Nom du gestionnaire</th>
-					<?php
-					include ("SAE23.php");
-					$requete = "SELECT * FROM `BATIMENT`";
-					$resultat = mysqli_query($id_bd, $requete)
-						or die("Execution de la requete impossible : $requete");
-						mysqli_close($id_bd);
-					
-					while($ligne=mysqli_fetch_array($resultat))
-						 {
-							extract($ligne);
-							echo "<tr> 
-								<td> $BAT_ID </td>
-								<td> $BAT_NOM </td>
-								<td> $GEST_NOM </td>
-								</tr>";
-						}
-					?>
-				</table>
-				</legend>
+   		</header>
 
-					<label for="Nom"><strong> Nom du batiment &agrave; supprimer : </strong></label>
-					<input type="text" name="Nom_Bat" id ="Nom" />
-				</fieldset>
-				<div class="valid">
-					<input type="submit" value="Enregistrez" />
-				</div>
-			</form>
+   		<section>
+			<?php
+				include ("SAE23.php");
+				$BAT_NOM = $_POST['Nom_Bat'];
+				$requete = "SELECT * FROM `BATIMENT` WHERE (`BAT_NOM`='$BAT_NOM')";
+				$resultat = mysqli_query($id_bd, $requete)
+					or die("Execution de la requete impossible : $requete");
+
+				while($ligne=mysqli_fetch_assoc($resultat))
+				 {
+					extract($ligne);
+					$GESTNOM= "$GEST_NOM";
+					} 
+
+				$requete = "DELETE FROM `GESTIONNAIRE` WHERE (`GEST_NOM`='$GESTNOM')";
+				$resultat = mysqli_query($id_bd, $requete)
+					or die("Execution de la requete impossible : $requete");
+				mysqli_close($id_bd);
+
+				echo "<p> Le batiment $BAT_NOM a été supprimé <p>"
+				?>
+			<hr>
+			<p class="boutonbis">
+				<a href="./administration.php" class="bouton">Retour &agrave; la page administration</a>
+			</p>
 		</section>
-
-  		<footer>
+	<footer>
     		<ul>
 				<li>Groupe GFLA</li>
 				<li>SAÉ 23</li>

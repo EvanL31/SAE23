@@ -20,7 +20,7 @@
 
  	<body>
  		<header>
-   			<h1> Suppression d'un b&acirc;timent </h1>
+   			<h1> Suppression d'un capteur </h1>
    			<hr>
 			<nav class="navbar" >
     		<ul>
@@ -28,50 +28,28 @@
 				<li><a href="./login_admin.php">Administration</a></li>
 		   		<li><a href="./login_gest.php">Gestion</a></li>
 		   		<li><a href="./consultation.php">Consultation</a></li>
-		   		<li><a href="./mentions_legales.html">Mentions l&eacute;gales</a></li>
+		   		<li><a href="./mentions_legales.html" class="last">Mentions l&eacute;gales</a></li>
     		</ul>
    			</nav>
-   		</header>	
- 
+   		</header>
+
 		<section>
-			<br />
-			<form action="suppbat.php" method="post" enctype="multipart/form-data">
-				<fieldset>
-					<legend> Suppression d'un b&acirc;timent </legend>
-					<table>
-						<th> Id du batiment </th>
-						<th> Nom du batiment </th>
-						<th> Nom du gestionnaire</th>
-					<?php
-					include ("SAE23.php");
-					$requete = "SELECT * FROM `BATIMENT`";
-					$resultat = mysqli_query($id_bd, $requete)
-						or die("Execution de la requete impossible : $requete");
-						mysqli_close($id_bd);
-					
-					while($ligne=mysqli_fetch_array($resultat))
-						 {
-							extract($ligne);
-							echo "<tr> 
-								<td> $BAT_ID </td>
-								<td> $BAT_NOM </td>
-								<td> $GEST_NOM </td>
-								</tr>";
-						}
-					?>
-				</table>
-				</legend>
+			<?php
+				include ("SAE23.php");
+				$Nom_Capt= $_POST['Nom_Capt'];
+				$request = "DELETE FROM `CAPTEUR` WHERE (`CAPT_NOM`='$Nom_Capt')";
+				$result = mysqli_query($id_bd, $request)
+					or die("Execution de la requete impossible : $request");
+				mysqli_close($id_bd);
 
-					<label for="Nom"><strong> Nom du batiment &agrave; supprimer : </strong></label>
-					<input type="text" name="Nom_Bat" id ="Nom" />
-				</fieldset>
-				<div class="valid">
-					<input type="submit" value="Enregistrez" />
-				</div>
-			</form>
+				echo "<p><strong> Le capteur $Nom_Capt &agrave; bien &eacute;t&eacute; supprim&eacute; . </strong></p>"
+			?>
+			<hr />
+			<p class="boutonbis">
+				<a href="administration.php"> Retour &agrave; la page d'administration </a>
+			</p>
 		</section>
-
-  		<footer>
+		<footer>
     		<ul>
 				<li>Groupe GFLA</li>
 				<li>SAÉ 23</li>
