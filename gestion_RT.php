@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
  <head>
- <link rel="stylesheet" type="text/css" href="./styles/styleRWD.css" />
  <link rel="stylesheet" type="text/css" href="./styles/style.css" />
   <link rel="icon" href="./images/initiales.jpg" />
   <title> Gestionnaire RT </title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Pour bien gérer le RWD -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="JG" />
   <meta name="description" content="SAÉ 23" />
   <meta name="keywords" content="HTML, CSS" />
@@ -16,8 +15,7 @@
  
   <header>
    <h1>  Consultation des mesures du bâtiment RT </h1>
-    <!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style1.css -->
-	<nav class="navbar" >
+	<nav class="navbar" > <!-- Navigation toolbar -->
     <ul>
 		   <li><a href="./index.html" class="first">Accueil</a></li>
 		   <li><a href="./login_admin.php">Administration</a></li>
@@ -26,7 +24,7 @@
 		   <li><a href="./mentions_legales.html">Mentions l&eacute;gales</a></li>
     </ul>
    </nav>
-   </header><!-- Il faut placer la balise de fermeture </header> ici pour utiliser correctement le style2.css -->
+   </header>
   
 
 <h1> Présentation de la page </h1>
@@ -36,10 +34,9 @@
 
 <h2 class="centre"> Affichage des mesures des capteurs du bâtiment RT </h2>
 
-<?php
-include ("SAE23.php");
+<?php /* Display of the last 15 values of the building RT, using the login script */
+	include ("SAE23.php");
 
-				/* Sélection des pieces en fonction de l'interet */
 				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'TE104' ORDER BY MES_DATE DESC LIMIT 15";
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
@@ -47,7 +44,9 @@ include ("SAE23.php");
 					echo "<th> Salle </th>";
 					echo "<th> Date et Heure </th>";
 					echo "<th> Valeurs (°C)</th>";
-				/* Affichage de la liste des pièces  */
+
+				/* Display of the values, with its date of collection and sensor name */
+
 				while($ligne=mysqli_fetch_assoc($result))
 				 {	
 					extract($ligne);
@@ -59,8 +58,6 @@ include ("SAE23.php");
 				 }
 				echo '</table>';
 
-
-				/* Sélection des pieces en fonction de l'interet */
 				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'CE104' ORDER BY MES_DATE DESC LIMIT 15";
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
@@ -69,7 +66,8 @@ include ("SAE23.php");
 					echo "<th> Date et Heure </th>";
 					echo "<th> Valeurs (PPM)</th>";
 
-				/* Affichage de la liste des pièces  */
+				/* Display of the values, with its date of collection and sensor name */
+
 				while($line=mysqli_fetch_assoc($result))
 				 {	
 					extract($line);
@@ -81,8 +79,6 @@ include ("SAE23.php");
 				 }
 				echo '</table>';
 
-
-					/* Sélection des pieces en fonction de l'interet */
 				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'CE208' ORDER BY MES_DATE DESC LIMIT 15";
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
@@ -92,7 +88,8 @@ include ("SAE23.php");
 					echo "<th> Date et Heure </th>";
 					echo "<th> Valeurs (PPM)</th>";
 
-				/* Affichage de la liste des pièces  */
+				/* Display of the values, with its date of collection and sensor name */
+
 				while($line=mysqli_fetch_assoc($result))
 				 {	
 					extract($line);
@@ -104,8 +101,6 @@ include ("SAE23.php");
 				 }
 				echo '</table>';
 
-
-					/* Sélection des pieces en fonction de l'interet */
 				$request = "SELECT * FROM `MESURE` WHERE CAPT_NOM = 'TE208' ORDER BY MES_DATE DESC LIMIT 15";
 				$result = mysqli_query($id_bd, $request)
 					or die("Execution de la requete impossible : $request");
@@ -115,7 +110,8 @@ include ("SAE23.php");
 					echo "<th> Date et Heure </th>";
 					echo "<th> Valeurs (°C)</th>";
 
-				/* Affichage de la liste des pièces  */
+				/* Display of the values, with its date of collection and sensor name */
+				
 				while($line=mysqli_fetch_assoc($result))
 				 {	
 					extract($line);
@@ -129,13 +125,25 @@ include ("SAE23.php");
 	mysqli_close($id_bd);
 			?>
 
-  <footer>
-    <ul>
-		<li>Groupe GLFA</li>
-		<li>SAÉ 23</li>
-		<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tel: +33 (0)562747575</li>
-	</ul>  
-  </footer>
-  </body>
-    
+  	<footer> <!-- Footer toolbar -->
+   		 <ul>
+				<li>Groupe GLFA</li>
+				<li>SAÉ 23</li>
+				<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tel: +33 (0)562747575</li>
+			</ul>  
+  	</footer>
+
+  	<aside>
+			<hr />
+			<p><em> Validation HTML5 - CSS 3 </em></p>
+			<a href="https://validator.w3.org/#validate_by_input" target="_blank"> 
+				<img src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
+			</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+			</a>
+		</aside>
+
+</body>    
 </html>

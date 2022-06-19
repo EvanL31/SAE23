@@ -1,4 +1,4 @@
-<?php 
+<?php /* Authenticity verification of the person acessing to this page */
 	session_start(); 
 	if ($_SESSION["auth"]!=TRUE)
 		header("Location:login_error.php");
@@ -22,7 +22,7 @@
  		<header>
    			<h1> Suppression d'un capteur </h1>
    			<hr>
-			<nav class="navbar" >
+			<nav class="navbar" > <!-- Navigation toolbar -->
     		<ul>
 		   		<li><a href="./index.html" class="first">Accueil</a></li>
 				<li><a href="./login_admin.php">Administration</a></li>
@@ -34,7 +34,7 @@
    		</header>
 
 		<section>
-			<?php
+			<?php /* Deleting form data from the DATABASE, using an SQL query and including the login script */
 				include ("SAE23.php");
 				$Nom_Capt= $_POST['Nom_Capt'];
 				$request = "DELETE FROM `CAPTEUR` WHERE (`CAPT_NOM`='$Nom_Capt')";
@@ -45,16 +45,30 @@
 				echo "<p><strong> Le capteur $Nom_Capt &agrave; bien &eacute;t&eacute; supprim&eacute; . </strong></p>"
 			?>
 			<hr />
-			<p class="boutonbis">
+			<p class="boutonbis"> <!-- Redirection button to the administration page -->
 				<a href="administration.php"> Retour &agrave; la page d'administration </a>
 			</p>
 		</section>
-		<footer>
+
+		<footer> <!-- Footer toolbar -->
     		<ul>
 				<li>Groupe GFLA</li>
 				<li>SAÉ 23</li>
 				<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
 			</ul>  
   		</footer>
+
+  		<aside>
+			<hr />
+			<p><em> Validation HTML5 - CSS 3 </em></p>
+			<a href="https://validator.w3.org/#validate_by_input" target="_blank"> 
+				<img src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
+			</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+			</a>
+		</aside>
+
   	</body> 
 </html>

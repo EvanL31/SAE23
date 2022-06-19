@@ -1,10 +1,10 @@
 <?php
-/* Script de connexion à la base smi */
+/* This script is meant to connect to the DATABASE, using a login and a password we created */
 
-  $id_bd = mysqli_connect("192.168.101.185","laffely","evan","SAE23")
+  $id_bd = mysqli_connect("192.168.0.17","laffely","evan","SAE23")
     or die("Connexion au serveur et/ou à la base de données impossible");
 
-  /* Gestion de l'encodage des caractères */
+  /* Data encoding management */
   mysqli_query($id_bd, "SET NAMES 'utf8'");
 
 ?>

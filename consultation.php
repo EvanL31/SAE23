@@ -9,7 +9,7 @@
   <meta name="author" content="GFLA" />
   <meta name="description" content="SAÉ 23" />
   <meta name="keywords" content="HTML, CSS" />
-  <meta HTTP-EQUIV="Refresh" CONTENT="10; URL=http://192.168.101.185/SAE23/consultation.php"> 
+  <meta HTTP-EQUIV="Refresh" CONTENT="10; URL=http://192.168.0.17/SAE23/consultation.php"> 
  </head>
 
  <body>
@@ -17,7 +17,7 @@
   <header>
    <h1>  Consultation des mesures </h1>
     <hr>
-	<nav class="navbar" >
+	<nav class="navbar"> <!-- Navigation toolbar -->
     <ul>
 		   <li><a href="./index.html" class="first">Accueil</a></li>
 		   <li><a href="./login_admin.php">Administration</a></li>
@@ -28,7 +28,7 @@
    </nav>
    </header>
 
-	<?php
+	<?php /* Selection of the last value for each sensor, using a mysql query */
 	include ("SAE23.php");
 	$requete = " SELECT * FROM MESURE WHERE CAPT_NOM = 'CE208' ORDER BY MES_DATE DESC LIMIT 1";
 		$resultat = mysqli_query($id_bd, $requete)
@@ -95,60 +95,75 @@
 					$CB204= "$MES_VAL";
 					}
 	mysqli_close($id_bd);
-echo "
-	<table>
-  <tr> 
-    <td COLSPAN=\"4\">BAT RT</td>
-  </tr>
-  <tr> 
-    <td COLSPAN=\"2\">Salle E208</td>
-    <td COLSPAN=\"2\">Salle E104</td>
-  </tr>
-  <tr> 
-    <td>Temp&eacute;rature</td>
-    <td>CO2</td>
-    <td>Temp&eacute;rature</td>
-    <td>CO2</td>
-  </tr>
-  <tr> 
-    <td>$TE208 °C</td>
-    <td>$CE208 ppm</td>
-    <td>$TE104 °C</td>
-    <td>$CE104 ppm</td>
-  </tr>
-</table>
 
-<table>
-  <tr> 
-    <td COLSPAN=\"4\">BAT INFO</td>
-  </tr>
-  <tr> 
-    <td COLSPAN=\"2\">Salle B103</td>
-    <td COLSPAN=\"2\">Salle B204</td>
-  </tr>
-  <tr> 
-    <td>Temp&eacute;rature</td>
-    <td>CO2</td>
-    <td>Temp&eacute;rature</td>
-    <td>CO2</td>
-  </tr>
-  <tr> 
-    <td>$TB103 °C</td>
-    <td>$CB103 ppm</td>
-    <td>$TB204 °C</td>
-    <td>$CB204 ppm</td>
-  </tr>
-</table>
-		"
-?>
+/* Display of the value, with its room and unit */
+
+	echo "
+		<table>
+	  <tr> 
+	    <td COLSPAN=\"4\">BAT RT</td>
+	  </tr>
+	  <tr> 
+	    <td COLSPAN=\"2\">Salle E208</td>
+	    <td COLSPAN=\"2\">Salle E104</td>
+	  </tr>
+	  <tr> 
+	    <td>Temp&eacute;rature</td>
+	    <td>CO2</td>
+	    <td>Temp&eacute;rature</td>
+	    <td>CO2</td>
+	  </tr>
+	  <tr> 
+	    <td>$TE208 °C</td>
+	    <td>$CE208 ppm</td>
+	    <td>$TE104 °C</td>
+	    <td>$CE104 ppm</td>
+	  </tr>
+	</table>
+
+	<table>
+	  <tr> 
+	    <td COLSPAN=\"4\">BAT INFO</td>
+	  </tr>
+	  <tr> 
+	    <td COLSPAN=\"2\">Salle B103</td>
+	    <td COLSPAN=\"2\">Salle B204</td>
+	  </tr>
+	  <tr> 
+	    <td>Temp&eacute;rature</td>
+	    <td>CO2</td>
+	    <td>Temp&eacute;rature</td>
+	    <td>CO2</td>
+	  </tr>
+	  <tr> 
+	    <td>$TB103 °C</td>
+	    <td>$CB103 ppm</td>
+	    <td>$TB204 °C</td>
+	    <td>$CB204 ppm</td>
+	  </tr>
+	</table>
+	";
+	?>
   
-  <footer>
-    <ul>
-		<li>Groupe GFLA</li>
-		<li>SAE 23</li>
-		<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
-	</ul>  
-  </footer>
-  </body>
-    
+ 	 <footer>
+   		 <ul>
+				<li>Groupe GFLA</li>
+				<li>SAE 23</li>
+				<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
+			</ul>  
+ 	 </footer>
+
+  	<aside>
+			<hr />
+			<p><em> Validation HTML5 - CSS 3 </em></p>
+			<a href="https://validator.w3.org/#validate_by_input" target="_blank"> 
+				<img src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
+			</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+			</a>
+		</aside>
+
+  </body> 
 </html>

@@ -20,16 +20,30 @@ gestion_RT.php : Page de consultation des données du bâtiment RT
 
 gestion_INFO : Page de consultation des données du bâtiment INFO
 
-login_error.php : Page de redirection en cas de mauvaise rentrée d'un login/mot de passe
-
-entete_admin.html : Entête servant dans la page "login_admin.php"
-
-entete_gest.html : Entête servant dans la page "login_gest.php"
-
 ajout_bat.php : Page de rentrée du bâtiment à ajouter à la Base de Données
+
+ajoutbat.php : Page d'ajout du bâtiment, selon le formulaire réalisé page précédente
 
 ajout_capt.php : Page de rentrée du capteur à ajouter dans la Base de Données
 
+ajoutcapt.php : Page d'ajout du capteur, selon le formulaire réalisé page précédente
+
 supp_bat.php : Page de rentrée du bâtiment à supprimer de la Base de Données
 
+suppbat.php : Page de suppression du bâtiment, selon le formulaire réalisé page précédente
+
 supp_capt.php : Page de rentére du capteur à supprimer de la Base de Données
+
+suppcapt.php : Page de suppression du capteur, selon le formulaire réalisé page précédente
+
+login_error.php : Page de redirection en cas de mauvaise rentrée d'un login/mot de passe
+
+SAE23.php : Script contenant les identifiant de connexion à la Base de Données
+
+style.css : Page de style su site web (inclue le RWD)
+
+SAE23.sql : Fichier contenant la Base de Données, permettant l'importation dans phpmyadmin
+
+capteurs.sh : Script de publication de valeurs sur le broker MQTT
+
+admin.sh : Script de collecte des valeurs sur le broker MQTT et d'envoi dans la Base de Données

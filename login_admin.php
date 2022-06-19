@@ -1,14 +1,11 @@
-<?php
-	// Démarrage de la session
+<?php /* Start of the session */
 	session_start();
 ?>
 
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
- 		<link rel="stylesheet" type="text/css" href="./styles/styleRWD.css" />
- 		<link rel="stylesheet" type="text/css" href="./styles/style.css" />
-  		<link rel="icon" href="./images/initiales.jpg" />
+		<link rel="stylesheet" type="text/css" href="./styles/style.css" />
   		<title> Administrateur </title>
   		<meta charset="utf-8">
   		<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,7 +18,7 @@
 		<header>
    			<h1>Administration</h1>
     		<hr />
-			<nav class="navbar" >
+			<nav class="navbar" > <!-- Navigation toolbar -->
 			<ul>
 				   	<li><a href="./index.html" class="first">Accueil</a></li>
 				   	<li><a href="./login_admin.php">Administration</a></li>
@@ -37,7 +34,7 @@
 				<em><strong>Administration de la base : Acc&egrave;s limit&eacute; aux personnes autoris&eacute;es</strong></em>
 				<br />
 			</p>
-			<form action="log_admin.php" method="post" enctype="multipart/form-data">
+			<form action="log_admin.php" method="post" enctype="multipart/form-data"> <!-- Form to fill in, in order to authenticate as the administrator -->
 				<fieldset>
 					<legend>Saisissez le login !!</legend>
 					<label for="log">Login : </label>
@@ -50,15 +47,28 @@
 					<input type="submit" value="Valider" />
 				</p>
 			</form>
-			<hr />
 		</section>
-	  	<footer>
+
+	  	<footer> <!-- Footer toolbar -->
 			<ul>
 				<li>Groupe GFLA</li>
 				<li>SAE 23</li>
 				<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
 			</ul>  
 	  	</footer>
+
+  		<aside>
+			<hr />
+			<p><em> Validation HTML5 - CSS 3 </em></p>
+			<a href="https://validator.w3.org/#validate_by_input" target="_blank"> 
+				<img src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
+			</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+			</a>
+		</aside>
+	  	
 	</body>
 </html>
 

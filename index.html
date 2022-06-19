@@ -1,64 +1,73 @@
 <!DOCTYPE html>
 <html lang="fr">
  <head>
- <link rel="stylesheet" type="text/css" href="./styles/styleRWD.css" />
  <link rel="stylesheet" type="text/css" href="./styles/style.css" />
   <link rel="icon" href="./images/initiales.jpg" />
   <title> Accueil </title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Pour bien gérer le RWD -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="author" content="GLFA" />
   <meta name="description" content="SAE 23" />
   <meta name="keywords" content="HTML, CSS" />
  </head>
 
-<body>
+	<body>
 
-	<header>
-		<h1>Consultation et/ou gestion de capteurs de l'IUT de Blagnac</h1>
-		<hr>
-			<nav>
-				<ul>
-					<li><a href="./index.html" class="first">Accueil</a></li>
-					<li><a href="./login_admin.php">Administration</a></li>
-					<li><a href="./login_gest.php">Gestion</a></li>
-					<li><a href="./consultation.php">Consultation</a></li>
-					<li><a href="./mentions_legales.html" class="last">Mentions l&eacute;gales</a></li>
-				</ul>
-			</nav>
+		<header>
+			<h1>Consultation et/ou gestion de capteurs de l'IUT de Blagnac</h1>
+			<hr>
+				<nav> <!-- Navigation toolbar -->
+					<ul>
+						<li><a href="./index.html" class="first">Accueil</a></li>
+						<li><a href="./login_admin.php">Administration</a></li>
+							<li><a href="./login_gest.php">Gestion</a></li>
+						<li><a href="./consultation.php">Consultation</a></li>
+						<li><a href="./mentions_legales.html" class="last">Mentions l&eacute;gales</a></li>
+					</ul>
+				</nav>
+		</header>
 
-	</header>
-
-	<h2 class="h2_accueil">L'objectif de ce site ? C'est très simple:</h2>
-	<p>Nous avons créé ce site afin de faciliter la consultation des mesures des différents capteurs (<u>Luminosité</u> et <u>Température</u>) par des élèves de l'IUT ou bien par les professeurs. Ce site est principalement géré par l'administrateur ainsi que par les gestionnaires de chaque bâtiment.</p>
+		<h2 class="h2_accueil">L'objectif de ce site ? C'est très simple:</h2>
+		<p> Nous avons créé ce site afin de faciliter la consultation des mesures des différents capteurs (<u>Luminosité</u> et <u>Température</u>) par des élèves de l'IUT ou bien par les professeurs. Ce site est principalement géré par l'administrateur ainsi que par les gestionnaires de chaque bâtiment. </p>
 
 
-	<h2 class="h2_accueil">Ce que vous trouverez en parcourant ce site:</h2>
+		<h2 class="h2_accueil"> Ce que vous trouverez en parcourant ce site: </h2>
 
-	<ul class="ul_accueil">
-		<li>La page Administration accessible uniquement par la personne autorisée, possédant le mot de passe pour y accéder. La page sert à l'ajout et la suppression de capteurs et/ou de bâtiments.</li>
+		<ul class="ul_accueil">
+			<li> La page Administration accessible uniquement par la personne autorisée, possédant le mot de passe pour y accéder. La page sert à l'ajout et la suppression de capteurs et/ou de bâtiments. </li>
 
-<br>
+		<br>
 
-		<li class="li_accueil">La page Gestion est accessible uniquement par les gestionnaires qui, eux aussi, possèdent leur propre mot de passe pour y accéder. Cette page affiche les 15 dernières valeurs mesurées par les capteurs de leur propre bâtiment uniquement.</li>
+			<li class="li_accueil"> La page Gestion est accessible uniquement par les gestionnaires qui, eux aussi, possèdent leur propre mot de passe pour y accéder. Cette page affiche les 15 dernières valeurs mesurées par les capteurs de leur propre bâtiment uniquement. </li>
 
-<br>
+		<br>
 
-		<li class="li_accueil">La page Consultation, accessible par tout le monde, affiche la dernière mesure des capteurs de tous les bâtiments.</li>
+		<li class="li_accueil"> La page Consultation, accessible par tout le monde, affiche la dernière mesure des capteurs de tous les bâtiments. </li>
 
-<br>
+		<br>
 
-		<li class="li_accueil">Et enfin, la page Mentions Légales qui, comme son nom l'indique, affiche les mentions légales du site web.</li>
+			<li class="li_accueil"> Et enfin, la page Mentions Légales qui, comme son nom l'indique, affiche les mentions légales du site web. </li>
+		</ul>
 
-	</ul>
+  	<footer> <!-- Footer toolbar -->
+    	<ul>
+				<li>Groupe GFLA</li>
+				<li>SAE 23</li>
+				<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
+			</ul>  
+  	</footer>
 
-  <footer>
-    <ul>
-		<li>Groupe GFLA</li>
-		<li>SAE 23</li>
-		<li>IUT Blagnac&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> tél: +33 (0)562747575</li>
-	</ul>  
-  </footer>
-  </body>
-    
+  		<aside>
+			<hr />
+			<p><em> Validation HTML5 - CSS 3 </em></p>
+			<a href="https://validator.w3.org/#validate_by_input" target="_blank"> 
+				<img src="./images/html5-validator-badge-blue.png" alt="HTML5 Valide !" />
+			</a>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<a href="https://jigsaw.w3.org/css-validator/#validate_by_input" target="_blank">
+				<img src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="CSS Valide !" />
+			</a>
+		</aside>
+
+	</body>  
 </html>

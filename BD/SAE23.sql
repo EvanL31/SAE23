@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 16 Juin 2022 à 09:52
+-- Généré le :  Ven 17 Juin 2022 à 17:25
 -- Version du serveur :  5.6.20
 -- Version de PHP :  5.5.15
 
@@ -47,18 +47,18 @@ INSERT INTO `ADMINISTRATION` (`LOGIN`, `PASSWD`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `BATIMENT` (
-  `BAT_ID` varchar(15) NOT NULL,
+`BAT_ID` int(15) NOT NULL,
   `BAT_NOM` varchar(15) NOT NULL,
   `GEST_NOM` varchar(15) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `BATIMENT`
 --
 
 INSERT INTO `BATIMENT` (`BAT_ID`, `BAT_NOM`, `GEST_NOM`) VALUES
-('1', 'RT', 'GEST_RT'),
-('2', 'INFO', 'GEST_INFO');
+(2, 'RT', 'GEST_RT'),
+(3, 'INFO', 'GEST_INFO');
 
 -- --------------------------------------------------------
 
@@ -71,21 +71,21 @@ CREATE TABLE IF NOT EXISTS `CAPTEUR` (
   `CAPT_NOM` varchar(15) NOT NULL,
   `CAPT_TYPE` varchar(15) NOT NULL,
   `BAT_NOM` varchar(15) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Contenu de la table `CAPTEUR`
 --
 
 INSERT INTO `CAPTEUR` (`CAPT_ID`, `CAPT_NOM`, `CAPT_TYPE`, `BAT_NOM`) VALUES
-(2, 'TE208', 'temperature', 'RT'),
-(3, 'TE104', 'temperature', 'RT'),
 (4, 'CE208', 'co2', 'RT'),
 (5, 'CE104', 'co2', 'RT'),
 (6, 'TB103', 'temperature', 'INFO'),
 (8, 'TB204', 'temperature', 'INFO'),
 (9, 'CB103', 'co2', 'INFO'),
-(10, 'CB204', 'co2', 'INFO');
+(10, 'CB204', 'co2', 'INFO'),
+(14, 'TE104', 'temperature', 'RT'),
+(25, 'TE208', 'temperature', 'RT');
 
 -- --------------------------------------------------------
 
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `MESURE` (
   `MES_VAL` varchar(30) NOT NULL,
   `MES_DATE` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `CAPT_NOM` varchar(15) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2960 ;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
 -- Index pour les tables exportées
@@ -159,15 +159,20 @@ ALTER TABLE `MESURE`
 --
 
 --
+-- AUTO_INCREMENT pour la table `BATIMENT`
+--
+ALTER TABLE `BATIMENT`
+MODIFY `BAT_ID` int(15) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+--
 -- AUTO_INCREMENT pour la table `CAPTEUR`
 --
 ALTER TABLE `CAPTEUR`
-MODIFY `CAPT_ID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
+MODIFY `CAPT_ID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT pour la table `MESURE`
 --
 ALTER TABLE `MESURE`
-MODIFY `MES_ID` int(5) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2960;
+MODIFY `MES_ID` int(5) NOT NULL AUTO_INCREMENT;
 --
 -- Contraintes pour les tables exportées
 --
